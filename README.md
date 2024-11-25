@@ -9,8 +9,4 @@ Employee has an ID and a name.
 
 This application has a HTML UI and a REST API.
 
-
-Use POstgres.
-brach merge 2
-
-change 1
+Use mySQL.

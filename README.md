@@ -5,4 +5,4 @@
 * Web application
 * VCS: GitHub
 
-  EMployee has an ID and a name.
+EMployee has an ID and a name.

@@ -4,3 +4,5 @@
 * Framework: Flask
 * Web application
 * VCS: GitHub
+
+  EMployee has an ID and a name.

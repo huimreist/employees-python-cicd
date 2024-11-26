@@ -13,25 +13,3 @@ Use mySQL.
 
 DEMO.
 
-demo2-2.
-
-services:
-  postgres:
-    image: postgres
-    environment:
-      POSTGRES_DB: employees
-      POSTGRES_USERS: employees
-      POSTGRES_PASSWORD: employees
-    healthcheck:
-      test: ["CMD_SHELL", "sh -c 'pg_isready -U employees -d employees'"]
-  employees-python:
-    image: employyes-python
-    depends_on:
-      postgres:
-        condition: service_healthy
-    ports:
-      - "81:5000"
-    environment:
-      DATABASE_HOST: postgres
-    healthcheck:
-      test: curl --fail http://localhost:5000 | exit 1

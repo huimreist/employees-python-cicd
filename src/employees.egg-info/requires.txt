@@ -1,0 +1,15 @@
+Flask
+psycopg[binary,pool]
+Flask-WTF
+gunicorn
+
+[dev]
+pytest
+pytest-mock
+requests
+selenium
+webdriver-manager
+ruff
+pre-commit
+pdoc
+mkdocs

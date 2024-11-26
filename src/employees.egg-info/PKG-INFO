@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: employees
+Version: 1.0.0
+Requires-Dist: Flask
+Requires-Dist: psycopg[binary,pool]
+Requires-Dist: Flask-WTF
+Requires-Dist: gunicorn
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: requests; extra == "dev"
+Requires-Dist: selenium; extra == "dev"
+Requires-Dist: webdriver-manager; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pdoc; extra == "dev"
+Requires-Dist: mkdocs; extra == "dev"

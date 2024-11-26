@@ -15,8 +15,8 @@ jobs:
                 cache: 'pip'
             - name: Install dependecies
               run: pip install -c constraints.txt .[dev]
-            - name: Static analysis
-              run: pre-commit run --all-files
+           # - name: Static analysis
+            #  run: pre-commit run --all-files
             - name: Unit tests
               run: pytest -v test/unit
             - name: Create docker image

@@ -1,0 +1,26 @@
+name: Build
+on:
+    push:
+        branches: [master]
+jobs:
+    #job neve tetszőlegesen választható
+    build:
+        name: Build
+        runs-on: ubuntu-latest
+        steps: 
+            - uses: actions/checkout@v4
+            - uses: sctions/setup-python@v5
+              with:
+                python-version: '3.13'
+                cache: 'pip'
+            - name: Install dependecies
+              run: pip install -c constraints.txt .[dev]
+            - name: Static analysis
+              run: pre-commit run --all-files
+            - name: Unit tests
+              run: pytest -v test/unit
+            - name: Create docker image
+              run: docker build -t employee-python .
+            
+
+            
